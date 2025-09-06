@@ -1,8 +1,6 @@
 import React from "react";
 import reactLogo from "./assets/react.svg";
 import { FaHome } from "react-icons/fa";
-
-
 // import Header from "./Header";
 // import Footer from "./Footer";
 // import "./App.css";

@@ -72,8 +72,8 @@ body {
 background-color: #090953;
   color: #fff;
   text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+  padding: 2rem 0;
+  /* margin-top: 2rem;  */
 }
 
 /* Responsive styling */
@@ -104,5 +104,170 @@ background-color: #090953;
 
   .logo {
     font-size: 1.2rem;
+  }
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* img full screen fill */
+  z-index: -1; /* img peeche chala jaye */
+  filter: brightness(70%); /* thoda dark taaki text clear dikhe */
+}
+
+.hero-content {
+  color: #fff;
+  text-align: center;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.learn-btn {
+  background:#090953;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.learn-btn:hover {
+  background: #1eb6e9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+
+.footer {
+  background-color: #090953;
+  color: #fff;
+  padding: 3rem 2rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+
+.send-btn {
+  background:transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 200px;
+ 
+}
+
+/* .send-btn:hover {
+  background: #e91e63;
+} */
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-info h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .footer-title {
+    text-align: center;
   }
 }

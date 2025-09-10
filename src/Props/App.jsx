@@ -14,10 +14,11 @@ const App = () => {
           name="Aman Verma" 
           role="Frontend Developer" 
           img={Img1}
+      
         />
         <Card 
           name="Priya Sharma" 
-          role="UI/UX Designer" 
+          role="React" 
           img={Img2}
         />
         <Card 

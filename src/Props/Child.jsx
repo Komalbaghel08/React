@@ -6,6 +6,7 @@ const Card = ({ name, role, img }) => {
       <img src={img} alt={name} className="profile-img" />
       <h2>{name}</h2>
       <p>{role}</p>
+      <button>ClickMe</button>
     </div>
   );
 };

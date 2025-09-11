@@ -10,7 +10,7 @@ function Navbar() {
     
       <h1 className="text-xl font-bold">MyWebsite</h1>
 
-      <ul className="flex gap-6">
+      <ul className="flex gap-6 hidden lg:flex gap-2">
         <li>Home</li>
         <li>About</li>
         <li>Services</li>
@@ -18,13 +18,12 @@ function Navbar() {
         <button className='border rounded m-0.5 p-0.5 bg-fuchsia-300'>Search</button>
       </ul>
     </nav>
-    <main>
-
-      <section className='w-full h-screen border bg-[url()]'>
-
-      </section>
-    </main>
-    <div className='align-middle'><img src={pic} alt="" /></div>
+ <div className='h-70 w-70 border '></div>
+ <div className='h-70 w-70 border '></div>
+ <div className='h-70 w-70 border '></div>
+ <div className='h-70 w-70 border '></div>
+ <div className='h-70 w-70 border '></div>
+ <div className='h-70 w-70 border '></div>
     </>
   );
 }

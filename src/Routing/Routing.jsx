@@ -1,31 +1,24 @@
 import React from "react";
-import { Routes,Route,Link} from "react-router-dom";
-import Rhome from "./Rhome"
-import Rabout from "./Rabout"
-import Rcontact from "./Rcontact"
+import { Routes, Route, Link } from "react-router-dom";
+import Rhome from "./Rhome";
+import Rabout from "./Rabout";
+import Rcontact from "./Rcontact";
+import Layout from "./Layout";
+import { HiH1 } from "react-icons/hi2";
 
-const App=()=>{
-    return(
-        <>
-        <header>
-            <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                </ul>
-            </nav>
-        </header>
+const App = () => {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />} >
+        <Route path="Home" element={<Rhome />} />
+        <Route path="About" element={<Rabout />} />
+        <Route path="Contact" element={<Rcontact />} />
+        <Route path="*" element={<h1>ERROR</h1>} />
+      </Route>
+      </Routes>
+    </>
+  );
+};
 
-        <Routes>
-            <Route path="/" element={<Rhome/>}/>
-            <Route path="/about" element={<Rabout/>}/>
-            <Route path="/contact" element={<Rcontact/>}/>
-        </Routes>
-
-        <h3>I am Footer</h3>
-        </>
-    )
-}
-
-export default App
+export default App;

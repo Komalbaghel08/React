@@ -1,47 +1,107 @@
 import { useState } from "react";
-const App = ()=>{
-    // const [name,setname] = useState("")
-    // const [email,setemail] = useState("")
-    // const [num,setnum] = useState("")
-    // const [pass,setpass] = useState("")
-    const[formdata , setformData]=useState({
 
-        name:"",
-        email:"",
-        num:"",
-        pass:""
-    })
-   let changeimp =(e)=>{
-      setformData({
-        ...formdata,
-        [e.target.name]:e.target.value
-      })
-   }
+const App = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    contact: "",
+    password: "",
+  });
 
+  const [errors, setErrors] = useState({});
 
-    let handlesubmit=(e)=>{
-        e.preventDefault() //to prevent form reloading
-        alert("form submitted")
+  // Input change handler
+  const changeInp = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Form submit handler
+  const handlePrevent = (e) => {
+    e.preventDefault();
+    let newErrors = {};
+
+    if (formData.name.trim() === "") {
+      newErrors.name = "Name is required";
+      localStorage.setItem
+    }
+    if (formData.email.trim() === "") {
+      newErrors.email = "Email is required";
+    }
+    if (formData.contact.trim() === "") {
+      newErrors.contact = "Contact is required";
+    }
+    if (formData.password.trim() === "") {
+      newErrors.password = "Password is required";
     }
 
-    return (
-        <>
-            <h1>Form</h1>   
-            
-            <form onSubmit={handlesubmit}>
-                <h1>{formdata.name}</h1>
-                Name <input type="text" name="name" value={formdata.name} onChange = {changeimp}/> <br /> <br />
-                <h1>{formdata.email}</h1>
-                Email <input type="text" name="email" value={formdata.email} onChange={changeimp} /><br /> <br />
-                <h1>{formdata.num}</h1>
-                Contact <input type="text" name="num" value={formdata.num} onChange={changeimp} /><br /> <br />
-                <h1>{formdata.pass}</h1>
-                password <input type="text" name="pass" value={formdata.pass} onChange={changeimp} /><br /> <br />
-              
-               <button type="submit">Sign up</button>
-            </form>
-        </>
-    )
+    setErrors(newErrors);
 
-}
-export default App
+    if (Object.keys(newErrors).length === 0) {
+        localStorage.setItem("formData", JSON.stringify(formData));
+        alert("Form submitted successfully!");
+        console.log(formData);
+    }
+  };
+
+  return (
+    <>
+      <h1>Form</h1>
+      <form onSubmit={handlePrevent}>
+        {/* Name */}
+        Name:{" "}
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={changeInp}
+        />
+        <br />
+        <small style={{ color: "red" }}>{errors.name}</small>
+        <br />
+
+        {/* Email */}
+        Email:{" "}
+        <input
+          type="text"
+          name="email"
+          value={formData.email}
+          onChange={changeInp}
+        />
+        <br />
+        <small style={{ color: "red" }}>{errors.email}</small>
+        <br />
+
+        {/* Contact */}
+        Contact:{" "}
+        <input
+          type="text"
+          name="contact"
+          value={formData.contact}
+          onChange={changeInp}
+        />
+        <br />
+        <small style={{ color: "red" }}>{errors.contact}</small>
+        <br />
+
+        {/* Password */}
+        Password:{" "}
+        <input
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={changeInp}
+        />
+        <br />
+        <small style={{ color: "red" }}>{errors.password}</small>
+        <br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </>
+  );
+};
+
+export default App;

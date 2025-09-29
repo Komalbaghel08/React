@@ -8,7 +8,8 @@ import { createRoot } from 'react-dom/client'
 // import App from './Routing/Routing.jsx';
 // import App from './Hook/Hook.jsx';
 // import App from './Form/Form.jsx';
-import App from './Form/Map.jsx';
+// import App from './Form/Map.jsx';
+import App from './Form/Practice.jsx';
 import { BrowserRouter } from 'react-router-dom';
 
 

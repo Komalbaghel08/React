@@ -16,7 +16,7 @@ const DarkModeToggle = () => {
       <h1>{darkMode ? 'Dark Mode Activated' : 'Dark Mode Not Activated'}</h1>
 
       <button onClick={() => setDarkMode(!darkMode)}>
-        Toggle Dark Mode
+        {darkMode ? "darkmode":"LightMode"}
       </button>
     </div>
   );

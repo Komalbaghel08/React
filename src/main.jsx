@@ -17,8 +17,7 @@ import { createRoot } from "react-dom/client";
 // import App from './Render/Rendering.jsx';
 // import App from './Render/Darkmode.jsx';
 // import App from './Context/Context.jsx';
-import App from './Practice/App.jsx';
-
+import App from './UseEffect/UseEffect.jsx';
 
 
 import { BrowserRouter } from "react-router-dom";

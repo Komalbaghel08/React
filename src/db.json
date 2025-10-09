@@ -1,0 +1,38 @@
+{
+    "hotel":[
+        {
+            "name":"komal",
+            "age":21,
+            "city":"bhopal",
+            "checkin":"20-10-2023",
+            "checkout":"21-10-2023",
+            "price":1200,
+            "people":2,
+            "total":4055
+        },
+        {
+               
+            "name":"komal",
+            "age":21,
+            "city":"bhopal",
+            "checkin":"20-10-2023",
+            "checkout":"21-10-2023",
+            "price":1200,
+            "people":3,
+            "total":4000
+        
+        },
+          {
+               
+            "name":"komal",
+            "age":21,
+            "city":"bhopal",
+            "checkin":"20-10-2023",
+            "checkout":"21-10-2023",
+            "price":1200,
+            "people":5,
+            "total":5000
+        
+        }
+    ]
+}

@@ -1,20 +1,60 @@
-import React, { useEffect } from 'react'
-import axios from 'axios'
+import React, { useEffect } from "react";
+import Axios from "axios";
+import axios from "axios";
+import { data } from "react-router-dom";
 const CRUD = () => {
-    useEffect( ()=>{
-   axios.get("http://localhost:3000/hotel").then( (res)=>{
-
-    console.log(res.data);
-   }).catch((err)=>{
-    console.log(err);
-   })
-
-    },[])
+  let [Data, setData] = React.useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/hotel")
+      .then((res) => {
+        console.log(res);
+        console.log(res.data);
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <>
-    <h1>Show data</h1>
-    </>
-  )
-}
+      <h1>Show data...</h1>
+      <div>
+        {/* {Data.map((e) => (
+          <h2>{e.name}</h2>
+        ))} */}
 
-export default CRUD
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age </th>
+              <th>City</th>
+              <th>CheckIN</th>
+              <th>CheckOut</th>                            
+              <th>price</th>
+              <th>people</th>
+              <th>total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Data.map((e) => (
+              <tr key={e.id}>
+                    <td>{e.name}</td>
+                    <td>{e.age}</td>
+                    <td>{e.city}</td>
+                    <td>{e.checkin}</td>
+                    <td>{e.checkout}</td>
+                    <td>{e.price}</td>
+                    <td>{e.people}</td>
+                    <td>{e.total}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
+};
+
+export default CRUD;

@@ -16,6 +16,9 @@ const CRUD = () => {
         console.log(err);
       });
   }, []);
+
+
+const post = ()
   return (
     <>
       <h1>Show data...</h1>
@@ -56,5 +59,4 @@ const CRUD = () => {
     </>
   );
 };
-
 export default CRUD;

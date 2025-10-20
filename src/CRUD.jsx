@@ -29,14 +29,12 @@ const CRUD = () => {
       .catch((err) => console.log(err));
   };
 
-
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const post = (e) => {
     e.preventDefault();
-
     axios.post("http://localhost:3000/hotel", form).then((res) => {
         alert("Data Added Successfully");
         setData([...Data, res.data]); 
@@ -53,7 +51,6 @@ const CRUD = () => {
       })
       .catch((err) => console.log(err));
   };
-
   return (
     <>
       <h1>Hotel Data Management </h1>

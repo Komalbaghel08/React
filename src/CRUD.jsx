@@ -105,5 +105,3 @@ const CRUD = () => {
   );
 };
 export default CRUD;
-
-

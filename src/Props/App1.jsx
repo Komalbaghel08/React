@@ -25,6 +25,7 @@ let collegeName=['NIT','DU','MIT','AU']
     <College names={collegeName[0]} />
     <College names={collegeName[1]} />
     <College names={collegeName[2]} />
+     <College names={collegeName[3]} />
     <User user={userObject}/>
     <User user={userObject1}/>
     <User user={userObject2}/>
